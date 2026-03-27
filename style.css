@@ -5,39 +5,38 @@ body {
 }
 
 header {
-  background: #ff4d6d;
+   background: linear-gradient(45deg, #ff4d6d, #ff758f);
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .produtos {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px;
+   text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 50px;
+  padding: 50px;
 }
 
 .produto {
+   display: inline-block;
+  margin: 50px;
+  padding: 10px;
+  border-radius: 20px;
   background: white;
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-  width: 180px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .produto img {
-  width: 100%;
-  border-radius: 10px;
+  width: 200px !important;
+   border-radius: 10px;
 }
 
 .produto a {
-  display: inline-block;
+   display: inline-block;
   margin-top: 10px;
-  padding: 8px 12px;
-  background: #25D366;
+  padding: 5px 10px;
+  background: green;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -82,4 +81,108 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.banner {
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+              url('https://via.placeholder.com/800x300') center/cover;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.banner h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+}
+
+.preco {
+  font-weight: bold;
+  color: #ff4d6d;
+}
+
+.produto {
+  transition: 0.3s;
+}
+
+.produto:hover {
+   transform: scale(1.05);
+}
+
+.btn-banner {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #222222;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-banner:hover {
+  background: #474747;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#contato {
+  text-align: center;
+  padding: 0px;
+}
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 15px;
+  }
+
+  .banner {
+    padding: 40px 10px;
+  }
+
+  .banner h2 {
+    font-size: 22px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .produto {
+    display: block;
+    margin: 15px auto;
+  }
+
+  .produto img {
+    width: 80px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
 }
